@@ -49,8 +49,9 @@ class Ui_MainWindow(object):
         self.repaint()
 
     def draw_circle(self, qp):
-        qp.setBrush(QColor(255, 255, 255))
-        pen = QPen(QtCore.Qt.yellow, 5)
+        qp.setBrush(QColor(randint(0, 256), randint(0, 256), randint(0, 256)))
+        color = QColor(randint(0, 256), randint(0, 256), randint(0, 256))
+        pen = QPen(color, 5)
         qp.setPen(pen)
         for _ in range(randint(1, 20)):
             d = randint(20, 200)
